@@ -1,13 +1,22 @@
-plugins {
-    id 'java'
-    id "org.springframework.boot" version "2.2.5.RELEASE"
-    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
+buildscript {
+    ext {
+        springBootVersion = '2.3.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
-sourceCompatibility = 1.8
+group = 'com.example'
+version = '1.0'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -15,4 +24,5 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
 }

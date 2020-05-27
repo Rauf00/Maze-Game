@@ -1,7 +1,5 @@
 package ca.mazegame.model;
 
-import sun.jvm.hotspot.tools.soql.SOQL;
-
 /**
  * Mouse class stores coordinates of the mouse.
  * It also supports a method that move the mouse
