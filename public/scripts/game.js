@@ -9,7 +9,6 @@ const myAppObj = new Vue({
         game: null,
         board: null,
     },
-
     methods: {
         newGame: makeNewGame,
         cheat1Cheese: send1CheeseCheat,
